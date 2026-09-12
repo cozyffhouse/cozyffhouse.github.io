@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bags & Accessories — Female Fashion House</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#4a2338;
+    --plum-deep:#241019;
+    --blush:#f4dfe0;
+    --blush-soft:#faeeec;
+    --rose:#c96f7a;
+    --rose-deep:#a8505c;
+    --sage:#8a9a7e;
+    --cream:#fbf6f1;
+    --ink:#2b2028;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;object-fit:cover;width:100%;height:100%;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,246,241,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,35,56,0.08);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1200px;margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--plum);}
+  .logo span{color:var(--rose-deep);font-style:italic;}
+  .nav-links{display:flex;gap:34px;font-size:0.92rem;font-weight:600;}
+  .nav-links a:hover{color:var(--rose-deep);}
+
+  main{padding:48px 0 100px;}
+  .breadcrumb{font-size:0.85rem;color:#8a7a80;margin-bottom:14px;}
+  .breadcrumb a:hover{color:var(--rose-deep);}
+  h1{font-size:clamp(2rem,4vw,2.8rem);color:var(--plum-deep);margin-bottom:8px;}
+  .subtitle{color:#7a6870;margin-bottom:44px;}
+
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .prod-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid rgba(74,35,56,0.08);transition:transform 0.15s ease;}
+  .prod-card:hover{transform:translateY(-3px);}
+  .prod-photo{aspect-ratio:1/1;overflow:hidden;background:var(--blush);}
+  .prod-info{padding:18px 20px 22px;}
+  .prod-label{font-size:0.74rem;color:var(--sage);font-weight:800;margin-bottom:7px;letter-spacing:0.03em;text-transform:uppercase;}
+  .prod-info h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;color:var(--ink);font-family:'Manrope',sans-serif;}
+  .prod-meta{display:flex;justify-content:space-between;align-items:center;}
+  .prod-price{color:var(--rose-deep);font-weight:800;}
+  .prod-link{font-size:0.84rem;font-weight:700;color:var(--plum);}
+
+  footer{padding:40px 0;border-top:1px solid rgba(74,35,56,0.1);margin-top:40px;text-align:center;font-size:0.85rem;color:#8a7a80;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .prod-grid{grid-template-columns:1fr 1fr;}
+    nav{padding:14px 20px;}
+  }
+  @media (max-width:560px){
+    .prod-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Female <span>Fashion</span> House</a>
+    <div class="nav-links">
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#dupes">Save vs Splurge</a>
+      <a href="index.html#finds">Curated Finds</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Bags & Accessories</div>
+  <h1>Bags & Accessories</h1>
+  <p class="subtitle">Bags, jewelry, and finishing touches for every outfit.</p>
+
+  <div class="prod-grid">
+
+    <!-- DEMO PRODUCT CARD 1 — copy this block for each new product -->
+    <a class="prod-card" href="product-bags-accessories-demo1.html">
+      <div class="prod-photo"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=500&q=80" alt="Demo Product 1"></div>
+      <div class="prod-info">
+        <div class="prod-label">Bags & Accessories</div>
+        <h3>DEMO — Product Name 1</h3>
+        <div class="prod-meta"><span class="prod-price">$29.99</span><span class="prod-link">View pick →</span></div>
+      </div>
+    </a>
+
+    <!-- DEMO PRODUCT CARD 2 -->
+    <a class="prod-card" href="product-bags-accessories-demo2.html">
+      <div class="prod-photo"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Demo Product 2"></div>
+      <div class="prod-info">
+        <div class="prod-label">Bags & Accessories</div>
+        <h3>DEMO — Product Name 2</h3>
+        <div class="prod-meta"><span class="prod-price">$34.99</span><span class="prod-link">View pick →</span></div>
+      </div>
+    </a>
+
+    <!-- DEMO PRODUCT CARD 3 -->
+    <a class="prod-card" href="product-bags-accessories-demo3.html">
+      <div class="prod-photo"><img src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=500&q=80" alt="Demo Product 3"></div>
+      <div class="prod-info">
+        <div class="prod-label">Bags & Accessories</div>
+        <h3>DEMO — Product Name 3</h3>
+        <div class="prod-meta"><span class="prod-price">$45.00</span><span class="prod-link">View pick →</span></div>
+      </div>
+    </a>
+
+    <!-- add more <a class="prod-card">...</a> blocks here for more products -->
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Female Fashion House. All rights reserved.
+</footer>
+
+</body>
+</html>
