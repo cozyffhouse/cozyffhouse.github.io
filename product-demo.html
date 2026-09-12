@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMO — Product Name 2 — Female Fashion House</title>
+<style>
+  :root{
+    --cream:#FBF6F0;
+    --blush:#F2D9D2;
+    --clay:#C97F67;
+    --ink:#2E2A28;
+    --muted:#8A8079;
+    --line:#EAE0D8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Georgia","Times New Roman",serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  header{
+    padding:20px 24px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  header a.logo{
+    text-decoration:none;
+    color:var(--ink);
+    font-size:1.1rem;
+    letter-spacing:0.5px;
+  }
+  header nav a{
+    margin-left:18px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.85rem;
+    color:var(--muted);
+    text-decoration:none;
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:32px 20px 64px;
+  }
+  .breadcrumb{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.8rem;
+    color:var(--muted);
+    margin-bottom:20px;
+  }
+  .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .product-image{
+    width:100%;
+    border-radius:14px;
+    overflow:hidden;
+    background:var(--blush);
+    margin-bottom:24px;
+  }
+  .product-image img{
+    width:100%;
+    display:block;
+  }
+  .category-tag{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.75rem;
+    color:var(--clay);
+    margin-bottom:6px;
+  }
+  h1{
+    font-size:1.9rem;
+    margin:0 0 10px;
+    line-height:1.25;
+  }
+  .price{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1.3rem;
+    color:var(--clay);
+    margin-bottom:18px;
+  }
+  .price .was{
+    text-decoration:line-through;
+    color:var(--muted);
+    font-size:1rem;
+    margin-left:8px;
+  }
+  .description{
+    font-size:1.02rem;
+    margin-bottom:28px;
+    max-width:65ch;
+  }
+  .details{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:20px 22px;
+    margin-bottom:28px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.92rem;
+  }
+  .details h2{
+    font-family:Georgia,serif;
+    font-size:1.05rem;
+    margin:0 0 12px;
+  }
+  .details ul{
+    margin:0;
+    padding-left:18px;
+    color:var(--muted);
+  }
+  .details li{margin-bottom:6px;}
+  .cta{
+    display:inline-block;
+    background:var(--clay);
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-size:0.95rem;
+  }
+  .disclosure{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.75rem;
+    color:var(--muted);
+    margin-top:16px;
+  }
+  footer{
+    text-align:center;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:0.8rem;
+    color:var(--muted);
+    padding:24px;
+    border-top:1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Female Fashion House</a>
+  <nav>
+    <a href="index.html#categories">Categories</a>
+    <a href="index.html#dupes">Save vs Splurge</a>
+    <a href="index.html#finds">Curated Finds</a>
+  </nav>
+</header>
+
+<main>
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="category-winter-outfits.html">Winter Outfits</a> / DEMO Product 2</div>
+
+  <div class="product-image">
+    <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80" alt="DEMO Product 2">
+  </div>
+
+  <div class="category-tag">Winter Outfits</div>
+  <h1>DEMO — Product Name 2</h1>
+  <div class="price">$29.99<span class="was">$45.00</span></div>
+
+  <p class="description">
+    এখানে প্রোডাক্টের ১-২ লাইনের বর্ণনা লিখবে — কাপড়টা দেখতে কেমন, কীভাবে স্টাইল করা যায়, কেন এটা ভালো পছন্দ।
+  </p>
+
+  <div class="details">
+    <h2>Why we picked it</h2>
+    <ul>
+      <li>ডিটেইল ১ (কাপড়, ফিট, রং)</li>
+      <li>ডিটেইল ২ (কোথায় পরা যায় / স্টাইলিং টিপ)</li>
+      <li>ডিটেইল ৩ (কেন এটা ভালো কেনাকাটা)</li>
+    </ul>
+  </div>
+
+  <a class="cta" href="https://www.amazon.com/YOUR-AFFILIATE-LINK-HERE" target="_blank" rel="noopener nofollow sponsored">Shop Now →</a>
+
+  <p class="disclosure">As an Amazon Associate, Female Fashion House earns from qualifying purchases.</p>
+</main>
+
+<footer>
+  &copy; 2026 Female Fashion House. All rights reserved.
+</footer>
+
+</body>
+</html>
