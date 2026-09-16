@@ -5,333 +5,485 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Female Fashion House — Curated Amazon Style Edit</title>
 <meta name="description" content="Curated Amazon fashion finds, splurge-vs-save style twins, and daily outfit lookbooks for every girl — cozy, trendy, and effortlessly chic.">
-<meta name="p:domain_verify" content="84b0382b40b4be8799ce1a5cb09ad747"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
- :root{
---plum:#8a3b2e;
---plum-deep:#4a1e17;
---blush:#fbe4d8;
---blush-soft:#fdf0e8;
---rose:#e08a6e;
---rose-deep:#c65d3e;
---sage:#7d9471;
---cream:#fdf8f3;
---ink:#2e2420;
---gold:#c99a4a;
-}
+  :root{
+    --cream:#FFF9F5;
+    --ivory:#F7E8E2;
+    --plum:#B5677A;
+    --plum-deep:#7A3F4A;
+    --rose:#F2B6BB;
+    --ink:#3D2E2A;
+    --gold:#C9A15A;
+    --line:rgba(61,46,42,0.14);
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Manrope',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
-  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
-  a{text-decoration:none;color:inherit;}
-  img{max-width:100%;display:block;object-fit:cover;width:100%;height:100%;}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  body{background:var(--cream);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.55;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;color:var(--plum-deep);letter-spacing:-0.01em;}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(251,246,241,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,35,56,0.08);}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1200px;margin:0 auto;}
-  .logo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--plum);}
-  .logo span{color:var(--rose-deep);font-style:italic;}
-  .nav-links{display:flex;gap:34px;font-size:0.92rem;font-weight:600;}
-  .nav-links a:hover{color:var(--rose-deep);}
-  .nav-cta{background:var(--plum);color:var(--cream);padding:11px 22px;border-radius:100px;font-size:0.88rem;font-weight:700;}
-  .nav-cta:hover{background:var(--plum-deep);}
+  header{position:sticky;top:0;background:var(--cream);z-index:50;border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .wordmark{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--plum-deep);letter-spacing:-0.01em;}
+  .wordmark span{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--rose);font-size:1.15em;margin-left:1px;}
+  nav ul{display:flex;gap:32px;list-style:none;}
+  nav a{font-size:0.9rem;}
+  nav a:hover{color:var(--plum);}
+  .pin-btn{background:var(--plum);color:var(--cream);padding:10px 18px;border-radius:2px;font-size:0.85rem;}
+  .pin-btn:hover{background:var(--plum-deep);}
+  @media(max-width:820px){nav ul{display:none;}}
 
-  .ticker-band{background:var(--plum-deep);color:var(--blush-soft);padding:11px 0;overflow:hidden;white-space:nowrap;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;}
-  .ticker-track{display:inline-block;animation:scroll 30s linear infinite;}
-  .ticker-track span{margin:0 26px;text-transform:uppercase;}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker{background:var(--plum-deep);color:var(--ivory);overflow:hidden;white-space:nowrap;padding:9px 0;font-size:0.8rem;}
+  .ticker span{padding:0 26px;border-right:1px solid rgba(255,255,255,0.25);}
 
-  .hero{padding:76px 32px 100px;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;max-width:1200px;margin:0 auto;align-items:center;}
-  .eyebrow{color:var(--rose-deep);font-weight:700;font-size:0.9rem;margin-bottom:18px;text-transform:uppercase;letter-spacing:0.03em;}
-  .hero h1{font-size:clamp(2.6rem,5vw,4rem);line-height:1.06;color:var(--plum-deep);margin-bottom:24px;}
-  .hero h1 em{color:var(--rose-deep);font-style:italic;}
-  .hero p{font-size:1.08rem;color:#5c4b52;max-width:46ch;margin-bottom:32px;}
-  .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
-  .btn-primary{background:var(--plum);color:var(--cream);padding:15px 30px;border-radius:100px;font-weight:700;display:inline-block;}
+  .badges{border-bottom:1px solid var(--line);}
+  .badges .wrap{display:flex;justify-content:space-between;padding:16px 32px;flex-wrap:wrap;gap:12px;}
+  .badge{display:flex;align-items:center;gap:10px;font-size:0.85rem;color:#4a3f3a;}
+  .badge .dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;}
+
+  .hero{padding:72px 0 0;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;padding-bottom:56px;}
+  .hero-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--gold);margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;}
+  .hero-eyebrow::before,.hero-eyebrow::after{content:"";width:28px;height:1px;background:var(--gold);display:inline-block;}
+  .hero h1{font-optical-sizing:auto;font-size:3.5rem;line-height:1.12;font-weight:500;margin-bottom:24px;max-width:560px;letter-spacing:-0.015em;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--plum);}
+  .hero p{font-size:1.1rem;max-width:440px;color:#5a4d47;margin-bottom:30px;line-height:1.65;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{background:var(--plum);color:var(--cream);padding:14px 26px;font-size:0.92rem;border-radius:2px;}
   .btn-primary:hover{background:var(--plum-deep);}
-  .btn-secondary{border:1.5px solid var(--plum);color:var(--plum);padding:13.5px 28px;border-radius:100px;font-weight:700;display:inline-block;}
-  .btn-secondary:hover{background:var(--blush-soft);}
-
+  .btn-ghost{padding:14px 24px;border:1px solid var(--ink);font-size:0.92rem;border-radius:2px;}
+  .btn-ghost:hover{border-color:var(--plum);color:var(--plum);}
   .hero-visual{position:relative;}
-  .hero-photo{aspect-ratio:4/5;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(46,21,35,0.18);}
-  .float-tag{position:absolute;bottom:-24px;left:-24px;background:var(--cream);border-radius:16px;padding:16px 20px;box-shadow:0 18px 36px rgba(46,21,35,0.16);max-width:210px;}
-  .float-tag .tag-title{font-weight:700;font-size:0.92rem;margin-bottom:3px;}
-  .float-tag .tag-price{color:var(--rose-deep);font-weight:800;font-size:1.02rem;}
+  .hero-visual img{border-radius:2px;width:100%;aspect-ratio:4/5;object-fit:cover;}
+  .price-tag{position:absolute;bottom:-20px;left:-20px;background:var(--cream);border:1px solid var(--line);padding:15px 20px;box-shadow:0 12px 30px rgba(42,35,32,0.12);}
+  .price-tag .label{font-size:0.7rem;color:var(--gold);display:block;margin-bottom:4px;}
+  .price-tag .name{font-family:'Fraunces',serif;font-size:0.95rem;}
+  .price-tag .price{font-size:0.88rem;margin-top:2px;}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;}.hero h1{font-size:2.3rem;}.price-tag{left:16px;}}
 
-  section{padding:90px 0;}
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;flex-wrap:wrap;gap:18px;}
-  .section-head h2{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--plum-deep);}
-  .section-head p{color:#7a6870;max-width:42ch;}
-  .see-all{font-weight:700;color:var(--rose-deep);white-space:nowrap;}
+  /* 3D rotating carousel */
+  .carousel{position:relative;height:400px;margin:0 auto 8px;perspective:1400px;max-width:1180px;}
+  .car-track{position:relative;width:100%;height:100%;}
+  .car-card{position:absolute;top:50%;left:50%;width:210px;height:270px;border-radius:8px;overflow:hidden;
+    box-shadow:0 18px 40px rgba(42,35,32,0.18);transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s ease,z-index 0s;}
+  .car-card img{width:100%;height:100%;object-fit:cover;}
+  .car-card .idx{position:absolute;top:10px;left:10px;background:rgba(42,35,32,0.85);color:#fff;font-size:0.72rem;padding:4px 9px;border-radius:20px;}
+  .car-card .price{position:absolute;top:10px;right:10px;background:var(--cream);color:var(--plum-deep);font-size:0.75rem;font-weight:600;padding:4px 10px;border-radius:20px;}
+  .car-card .rating{position:absolute;bottom:10px;left:10px;background:rgba(42,35,32,0.85);color:#fff;font-size:0.72rem;padding:4px 9px;border-radius:20px;}
+  .car-card .rating::before{content:"★ ";color:var(--gold);}
+  .car-card.center{width:250px;height:340px;border:2px solid var(--gold);z-index:10;}
+  .car-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+    background:var(--plum-deep);color:var(--cream);border:none;font-size:1.1rem;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;}
+  .car-arrow:hover{background:var(--plum);}
+  .car-arrow.prev{left:0;}
+  .car-arrow.next{right:0;}
+  @media(max-width:760px){.carousel{height:300px;}.car-card{width:150px;height:195px;}.car-card.center{width:180px;height:245px;}}
 
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .cat-card{aspect-ratio:3/4;border-radius:20px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:22px;}
-  .cat-card img{position:absolute;inset:0;}
-  .cat-card h3{color:#fff;font-size:1.15rem;position:relative;z-index:2;}
-  .cat-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg, rgba(20,10,15,0.78), rgba(20,10,15,0.02) 55%);z-index:1;}
+  /* hero entrance animation */
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .hero-eyebrow{animation:riseIn .7s ease both;}
+  .hero h1{animation:riseIn .7s ease .1s both;}
+  .hero > .wrap > p{animation:riseIn .7s ease .2s both;}
+  .carousel{animation:riseIn .8s ease .3s both;}
+  .hero .cta-row{animation:riseIn .7s ease .4s both;}
 
-  /* Splurge vs Save */
-  .compare-grid{display:flex;flex-direction:column;gap:22px;}
-  .compare-card{background:#fff;border-radius:22px;border:1px solid rgba(74,35,56,0.08);padding:26px;display:grid;grid-template-columns:110px 1fr auto 1fr;gap:22px;align-items:center;}
-  .compare-photo{width:110px;height:110px;border-radius:14px;overflow:hidden;}
-  .compare-col{display:flex;gap:16px;align-items:center;}
-  .compare-col .compare-photo{flex-shrink:0;}
-  .compare-label{font-size:0.72rem;font-weight:800;letter-spacing:0.04em;margin-bottom:6px;}
-  .label-splurge{color:#9a8a90;}
-  .label-save{color:var(--sage);}
-  .compare-name{font-weight:700;font-size:1rem;margin-bottom:4px;}
-  .compare-price{font-weight:700;}
-  .price-splurge{color:#9a8a90;text-decoration:line-through;}
-  .price-save{color:var(--rose-deep);font-size:1.15rem;}
-  .compare-arrow{width:40px;height:40px;border-radius:50%;background:var(--blush-soft);display:flex;align-items:center;justify-content:center;color:var(--rose-deep);font-weight:800;}
-  .savings-badge{display:inline-block;margin-top:8px;background:var(--sage);color:#fff;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;}
+  /* quick view on product cards */
+  .find-card{position:relative;}
+  .find-card .img-wrap{position:relative;overflow:hidden;border-radius:2px;margin-bottom:14px;}
+  .find-card .img-wrap img{margin-bottom:0;transition:transform .5s ease;}
+  .find-card:hover .img-wrap img{transform:scale(1.06);}
+  .quick-view{position:absolute;left:12px;right:12px;bottom:-46px;background:var(--cream);color:var(--plum-deep);
+    text-align:center;padding:11px;font-size:0.85rem;border-radius:2px;transition:bottom .3s ease;}
+  .find-card:hover .quick-view{bottom:14px;}
 
-  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .prod-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid rgba(74,35,56,0.08);}
-  .prod-photo{aspect-ratio:1/1;overflow:hidden;}
-  .prod-info{padding:18px 20px 22px;}
-  .prod-label{font-size:0.74rem;color:var(--sage);font-weight:800;margin-bottom:7px;letter-spacing:0.03em;text-transform:uppercase;}
-  .prod-info h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;color:var(--ink);}
-  .prod-meta{display:flex;justify-content:space-between;align-items:center;}
-  .prod-price{color:var(--rose-deep);font-weight:800;}
-  .prod-link{font-size:0.84rem;font-weight:700;color:var(--plum);}
+  /* testimonials */
+  .testimonials{background:var(--plum);color:var(--ivory);}
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+  .test-card{border-left:2px solid var(--gold);padding-left:20px;}
+  .test-quote{font-family:'Fraunces',serif;font-size:1.05rem;font-style:italic;line-height:1.5;margin-bottom:16px;color:var(--cream);}
+  .test-name{font-size:0.85rem;color:rgba(250,245,239,.72);}
+  @media(max-width:820px){.test-grid{grid-template-columns:1fr;}}
 
-  .editorial{background:var(--plum-deep);color:var(--blush-soft);padding:100px 0;}
-  .editorial .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .editorial h2{color:#fff;font-size:clamp(1.8rem,3vw,2.3rem);margin-bottom:18px;}
-  .editorial p{color:#d9c6cd;margin-bottom:26px;max-width:44ch;}
-  .editorial-visual{aspect-ratio:5/4;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,0.3);}
+  section{padding:76px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;gap:24px;}
+  .section-head h2{font-size:1.95rem;}
+  .section-head p{color:#4a3f3a;max-width:420px;margin-top:8px;}
+  .see-all{font-size:0.88rem;color:var(--plum);border-bottom:1px solid var(--plum);padding-bottom:2px;white-space:nowrap;}
 
-  .newsletter{background:var(--blush-soft);border-radius:26px;padding:56px 48px;text-align:center;max-width:1200px;margin:0 auto;}
-  .newsletter h2{color:var(--plum-deep);margin-bottom:10px;}
-  .newsletter p{color:#7a6870;margin-bottom:26px;}
-  .nl-form{display:flex;gap:12px;justify-content:center;max-width:440px;margin:0 auto;flex-wrap:wrap;}
-  .nl-form input{flex:1;min-width:200px;padding:14px 20px;border-radius:100px;border:1.5px solid rgba(74,35,56,0.15);font-family:inherit;font-size:0.94rem;}
-  .nl-form input:focus{outline:2px solid var(--rose-deep);border-color:transparent;}
+  .mood{background:var(--ivory);}
+  .mood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .mood-card{position:relative;aspect-ratio:3/4;border-radius:2px;overflow:hidden;}
+  .mood-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .mood-card:hover img{transform:scale(1.05);}
+  .mood-card .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,21,32,0) 45%,rgba(58,21,32,.75) 100%);}
+  .mood-card .name{position:absolute;bottom:16px;left:16px;color:#fff;font-family:'Fraunces',serif;font-size:1rem;}
+  @media(max-width:820px){.mood-grid{grid-template-columns:repeat(2,1fr);}}
 
-  footer{padding:60px 0 36px;border-top:1px solid rgba(74,35,56,0.1);margin-top:20px;}
-  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
-  .foot-grid h4{font-size:0.88rem;margin-bottom:16px;color:var(--plum-deep);}
+  /* look for less - richer */
+  .dupe-card{border:1px solid var(--line);margin-bottom:20px;overflow:hidden;}
+  .dupe-top{display:grid;grid-template-columns:1fr 1fr;}
+  .dupe-half{display:flex;gap:16px;padding:24px;align-items:center;}
+  .dupe-half.splurge{border-right:1px solid var(--line);background:var(--ivory);}
+  .dupe-half img{width:78px;height:78px;object-fit:cover;border-radius:2px;flex-shrink:0;}
+  .dupe-tag{font-size:0.68rem;letter-spacing:.06em;color:var(--gold);display:block;margin-bottom:4px;}
+  .dupe-half h3{font-size:0.98rem;font-weight:500;line-height:1.3;}
+  .dupe-price{font-size:0.92rem;margin-top:4px;}
+  .dupe-note{padding:16px 24px;font-size:0.88rem;color:#4a3f3a;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .dupe-note .save{color:var(--plum);font-weight:600;}
+  @media(max-width:640px){.dupe-top{grid-template-columns:1fr;}.dupe-half.splurge{border-right:none;border-bottom:1px solid var(--line);}}
+
+  .finds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .find-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;margin-bottom:14px;}
+  .find-cat{font-size:0.72rem;letter-spacing:.05em;color:var(--gold);margin-bottom:6px;}
+  .find-card h3{font-size:1.02rem;font-weight:500;margin-bottom:6px;}
+  .find-price{color:#4a3f3a;font-size:0.92rem;margin-bottom:10px;}
+  .find-link{font-size:0.86rem;border-bottom:1px solid var(--ink);padding-bottom:1px;}
+  @media(max-width:820px){.finds-grid{grid-template-columns:1fr 1fr;}}
+
+  /* editorial spotlight */
+  .spotlight{background:var(--plum-deep);color:var(--ivory);}
+  .spot-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  .spot-grid img{border-radius:2px;width:100%;aspect-ratio:3/4;object-fit:cover;}
+  .spot-eyebrow{font-size:0.8rem;color:var(--rose);margin-bottom:14px;}
+  .spot-grid h2{color:var(--cream);font-size:1.8rem;margin-bottom:14px;}
+  .spot-grid .rating{font-size:0.9rem;color:rgba(250,245,239,.8);margin-bottom:16px;}
+  .spot-grid p.body{color:rgba(250,245,239,.82);margin-bottom:20px;max-width:480px;}
+  .spot-facts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
+  .spot-facts span{border:1px solid rgba(250,245,239,.3);padding:7px 14px;border-radius:2px;font-size:0.8rem;}
+  .spot-price{font-size:1.3rem;font-family:'Fraunces',serif;margin-bottom:20px;}
+  .spot-price .was{font-size:0.9rem;color:rgba(250,245,239,.55);text-decoration:line-through;margin-left:10px;font-family:'Work Sans',sans-serif;}
+  @media(max-width:820px){.spot-grid{grid-template-columns:1fr;}}
+
+  /* lookbook */
+  .look-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .look-card{position:relative;aspect-ratio:3/4;border-radius:2px;overflow:hidden;}
+  .look-card img{width:100%;height:100%;object-fit:cover;}
+  .look-card .tag{position:absolute;top:14px;left:14px;background:var(--cream);padding:6px 12px;font-size:0.75rem;border-radius:2px;}
+  @media(max-width:820px){.look-grid{grid-template-columns:1fr 1fr;}.look-card:last-child{display:none;}}
+
+  .pin-strip{background:var(--ivory);}
+  .pin-strip .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .pin-strip h2{font-size:1.9rem;margin-bottom:14px;}
+  .pin-strip p{color:#4a3f3a;margin-bottom:24px;max-width:420px;}
+  .pin-strip img{border-radius:2px;width:100%;aspect-ratio:16/11;object-fit:cover;}
+  @media(max-width:820px){.pin-strip .wrap{grid-template-columns:1fr;}}
+
+  .newsletter{text-align:center;}
+  .newsletter h2{font-size:1.85rem;margin-bottom:10px;}
+  .newsletter p{color:#4a3f3a;margin-bottom:24px;}
+  .news-form{display:flex;justify-content:center;gap:10px;max-width:420px;margin:0 auto;}
+  .news-form input{flex:1;padding:13px 16px;border:1px solid var(--line);border-radius:2px;font-family:'Work Sans',sans-serif;}
+  .news-form button{background:var(--plum);color:var(--cream);padding:13px 22px;border:none;border-radius:2px;font-size:0.9rem;cursor:pointer;}
+  .news-form button:hover{background:var(--plum-deep);}
+  .disclosure{text-align:center;font-size:0.76rem;color:#7a6f68;padding-bottom:34px;}
+
+  footer{border-top:1px solid var(--line);padding:52px 0 28px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:36px;}
+  .foot-grid h4{font-size:0.8rem;letter-spacing:.05em;color:var(--gold);margin-bottom:12px;}
   .foot-grid ul{list-style:none;}
-  .foot-grid li{margin-bottom:10px;font-size:0.9rem;color:#6b5b62;}
-  .foot-grid li a:hover{color:var(--rose-deep);}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;color:#8a7a80;flex-wrap:wrap;gap:10px;padding-top:22px;border-top:1px solid rgba(74,35,56,0.08);}
-  .disclosure{font-size:0.78rem;color:#9a8a90;max-width:900px;margin:0 auto 24px;text-align:center;}
-
-  @media (max-width:860px){
-    .nav-links{display:none;}
-    .hero{grid-template-columns:1fr;padding-top:44px;}
-    .hero-visual{order:-1;}
-    .float-tag{left:16px;bottom:-16px;}
-    .cat-grid{grid-template-columns:repeat(2,1fr);}
-    .prod-grid{grid-template-columns:1fr;}
-    .editorial .wrap{grid-template-columns:1fr;}
-    .editorial-visual{order:-1;}
-    .foot-grid{grid-template-columns:1fr 1fr;}
-    .compare-card{grid-template-columns:1fr;text-align:center;}
-    .compare-col{flex-direction:column;}
-    .compare-arrow{margin:0 auto;}
-    nav{padding:14px 20px;}
-  }
+  .foot-grid li{margin-bottom:8px;font-size:0.9rem;}
+  .foot-grid li a:hover{color:var(--plum);}
+  .foot-brand p{color:#4a3f3a;font-size:0.9rem;max-width:260px;margin-top:10px;}
+  .copyright{border-top:1px solid var(--line);padding-top:20px;font-size:0.8rem;color:#7a6f68;}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 
 <header>
-  <nav>
-    <a href="#" class="logo">Female <span>Fashion</span> House</a>
-    <div class="nav-links">
-      <a href="#categories">Categories</a>
-      <a href="#dupes">Save vs Splurge</a>
-      <a href="#finds">Curated Finds</a>
-      <a href="#about">About</a>
-    </div>
-    <a href="#finds" class="nav-cta">Shop Trending</a>
-  </nav>
+  <div class="wrap nav-row">
+    <div class="wordmark">Female Fashion <span>House</span></div>
+    <nav><ul>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#dupes">Save vs Splurge</a></li>
+      <li><a href="#lookbook">Lookbook</a></li>
+      <li><a href="#finds">Curated Finds</a></li>
+    </ul></nav>
+    <a class="pin-btn" href="https://www.pinterest.com/Femalefashionhouse10/" target="_blank" rel="noopener">Follow on Pinterest</a>
+  </div>
 </header>
 
-<div class="ticker-band">
-  <div class="ticker-track">
-    <span>✦ New Pins Daily</span><span>✦ Cozy & Trendy Vibes</span><span>✦ Amazon Verified Finds</span><span>✦ Save vs Splurge Edits</span><span>✦ New Pins Daily</span><span>✦ Cozy & Trendy Vibes</span><span>✦ Amazon Verified Finds</span><span>✦ Save vs Splurge Edits</span>
+<div class="ticker">
+  <span>New pins daily</span><span>Cozy & trendy vibes</span><span>Amazon verified finds</span><span>Save vs splurge edits</span><span>New pins daily</span><span>Cozy & trendy vibes</span><span>Amazon verified finds</span>
+</div>
+
+<div class="badges">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>Hand-picked, top-rated Amazon finds only</div>
+    <div class="badge"><span class="dot"></span>Prime-eligible fast shipping</div>
+    <div class="badge"><span class="dot"></span>New outfit edit every week</div>
   </div>
 </div>
 
 <section class="hero">
-  <div>
-    <div class="eyebrow">Curated for Every Girl · 2026 Edit</div>
-    <h1>Cozy style, <em>curated finds</em>, zero guesswork.</h1>
-    <p>Daily outfit inspiration and hand-picked Amazon fashion, so you always know exactly what to wear — and what to click.</p>
-    <div class="btn-row">
-      <a href="#finds" class="btn-primary">Explore Today's Finds</a>
-      <a href="#dupes" class="btn-secondary">See Save vs Splurge</a>
-    </div>
+  <div class="wrap" style="text-align:center;">
+    <div class="hero-eyebrow">Curated for every girl · 2026 edit</div>
+    <h1 style="margin:0 auto 20px;">Cozy style, curated finds, zero guesswork.</h1>
+    <p style="margin:0 auto 36px;">Daily outfit inspiration and hand-picked Amazon fashion, so you always know exactly what to wear — and what to click.</p>
   </div>
-  <div class="hero-visual">
-    <div class="hero-photo">
-      <img src="cozy-cable-knit-sweater.jpg" alt="Cozy Cable Knit Sweater Outfit">
-    </div>
-    <div class="float-tag">
-      <div class="tag-title">Cozy Cable Knit Sweater Outfit</div>
-      <div class="tag-price">$34.99</div>
+
+  <div class="carousel">
+    <button class="car-arrow prev" aria-label="Previous">‹</button>
+    <div class="car-track" id="carTrack"></div>
+    <button class="car-arrow next" aria-label="Next">›</button>
+  </div>
+
+  <div class="wrap" style="text-align:center;margin-top:28px;">
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn-primary" href="#finds">Explore today's finds</a>
+      <a class="btn-ghost" href="#dupes">See save vs splurge</a>
     </div>
   </div>
 </section>
 
-<section id="categories">
+<script>
+(function(){
+  var items=[
+    {img:"wool-coat-cropped.png",name:"Cropped Wool Coat",price:"$42.99",rating:"4.7 (1,240+)"},
+    {img:"tote-bag-flower-charm.png",name:"Colorblock Tote",price:"$41.39",rating:"4.8 (860+)"},
+    {img:"crochet-beach-shorts.png",name:"Crochet Beach Shorts",price:"$19.99",rating:"4.6 (2,100+)"},
+    {img:"cozy-cable-knit-sweater.jpg",name:"Cozy Cable Knit Sweater",price:"$34.99",rating:"4.8 (3,420+)"},
+    {img:"https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=300&q=80",name:"Vegan Leather Tote",price:"$28.90",rating:"4.7 (1,900+)"},
+    {img:"https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=300&q=80",name:"Retro Oval Sunglasses",price:"$15.99",rating:"4.7 (9,400+)"},
+    {img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=300&q=80",name:"1950s A-Line Dress",price:"$43.99",rating:"4.6 (8,900+)"}
+  ];
+  var track=document.getElementById('carTrack');
+  var current=3;
+  var n=items.length;
+
+  items.forEach(function(it,i){
+    var card=document.createElement('div');
+    card.className='car-card';
+    card.innerHTML='<img src="'+it.img+'" alt="'+it.name+'">'+
+      '<span class="idx">#0'+(i+1)+'</span>'+
+      '<span class="price">'+it.price+'</span>'+
+      '<span class="rating">'+it.rating+'</span>';
+    track.appendChild(card);
+  });
+
+  function render(){
+    var cards=track.children;
+    for(var i=0;i<n;i++){
+      var offset=i-current;
+      if(offset>n/2) offset-=n;
+      if(offset<-n/2) offset+=n;
+      var x=offset*180;
+      var scale=offset===0?1:Math.max(0.6,1-Math.abs(offset)*0.16);
+      var rotate=offset*10;
+      var opacity=Math.abs(offset)>3?0:1-Math.abs(offset)*0.22;
+      cards[i].style.transform='translate(-50%,-50%) translateX('+x+'px) scale('+scale+') rotateY('+(-rotate)+'deg)';
+      cards[i].style.zIndex=100-Math.abs(offset);
+      cards[i].style.opacity=opacity;
+      cards[i].classList.toggle('center',offset===0);
+    }
+  }
+  render();
+
+  function next(){current=(current+1)%n;render();}
+  function prev(){current=(current-1+n)%n;render();}
+
+  document.querySelector('.car-arrow.next').addEventListener('click',function(){next();resetTimer();});
+  document.querySelector('.car-arrow.prev').addEventListener('click',function(){prev();resetTimer();});
+
+  var timer=setInterval(next,2000);
+  function resetTimer(){clearInterval(timer);timer=setInterval(next,2000);}
+})();
+</script>
+
+<section class="mood" id="categories">
   <div class="wrap">
     <div class="section-head">
       <div><h2>Shop by mood</h2><p>Pick the vibe you're dressing for today.</p></div>
-      <a href="#" class="see-all">View all →</a>
     </div>
-    <div class="cat-grid">
-      <a href="category-winter-outfits.html" class="cat-card"><img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=500&q=80" alt="Winter outfits"><h3>Winter Outfits</h3></a>
-      <a href="category-casual-summer.html" class="cat-card"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=500&q=80" alt="Casual summer"><h3>Casual Summer</h3></a>
-      <a href="category-bags-accessories.html" class="cat-card"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=500&q=80" alt="Bags and accessories"><h3>Bags & Accessories</h3></a>
-      <a href="category-coats-jackets.html" class="cat-card"><img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=500&q=80" alt="Coats and jackets"><h3>Coats & Jackets</h3></a>
+    <div class="mood-grid">
+      <a class="mood-card" href="category-winter-outfits.html">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt="Winter Outfits">
+        <div class="overlay"></div><span class="name">Winter Outfits</span>
+      </a>
+      <a class="mood-card" href="category-casual-summer.html">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Casual Summer">
+        <div class="overlay"></div><span class="name">Casual Summer</span>
+      </a>
+      <a class="mood-card" href="category-bags-accessories.html">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Bags & Accessories">
+        <div class="overlay"></div><span class="name">Bags & Accessories</span>
+      </a>
+      <a class="mood-card" href="category-coats-jackets.html">
+        <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=500&q=80" alt="Coats & Jackets">
+        <div class="overlay"></div><span class="name">Coats & Jackets</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="dupes" style="background:var(--blush-soft);">
+<section id="dupes">
   <div class="wrap">
     <div class="section-head">
-      <div><h2>Save vs. Splurge</h2><p>Editor-verified Amazon twins for iconic pieces — same look, real savings.</p></div>
-      <a href="#" class="see-all">See all comparisons →</a>
+      <div><h2>Look for less: style twins</h2><p>Editor-verified Amazon alternatives mirroring iconic pieces — same silhouette, real savings.</p></div>
     </div>
-    <div class="compare-grid">
-      <div class="compare-card">
-        <div class="compare-photo"><img src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=200&q=80" alt="Designer sunglasses"></div>
-        <div>
-          <div class="compare-label label-splurge">THE SPLURGE</div>
-          <div class="compare-name">Designer Oval Sunglasses</div>
-          <div class="compare-price price-splurge">$350</div>
+
+    <div class="dupe-card">
+      <div class="dupe-top">
+        <div class="dupe-half splurge">
+          <img src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=200&q=80" alt="Designer sunglasses">
+          <div><span class="dupe-tag">The splurge</span><h3>Designer Oval Sunglasses</h3><div class="dupe-price">$350</div></div>
         </div>
-        <div class="compare-arrow">→</div>
-        <div class="compare-col">
-          <div class="compare-photo"><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=200&q=80" alt="Amazon sunglasses dupe"></div>
-          <div>
-            <div class="compare-label label-save">THE SMART SAVE</div>
-            <div class="compare-name">Retro Oval UV400 Sunglasses</div>
-            <div class="compare-price price-save">$15.99</div>
-            <span class="savings-badge">Save 95%</span>
-          </div>
+        <div class="dupe-half">
+          <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=200&q=80" alt="Retro sunglasses dupe">
+          <div><span class="dupe-tag">The smart save</span><h3>Retro Oval UV400 Sunglasses</h3><div class="dupe-price">$15.99</div></div>
         </div>
       </div>
-      <div class="compare-card">
-        <div class="compare-photo"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=200&q=80" alt="Designer shoulder bag"></div>
-        <div>
-          <div class="compare-label label-splurge">THE SPLURGE</div>
-          <div class="compare-name">Slouchy Shoulder Bag</div>
-          <div class="compare-price price-splurge">$1,450</div>
+      <div class="dupe-note">Same 90s narrow-oval silhouette with UV400 polarized lenses. <span class="save">Save $334.01 · 95% less</span></div>
+    </div>
+
+    <div class="dupe-card">
+      <div class="dupe-top">
+        <div class="dupe-half splurge">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=200&q=80" alt="Designer shoulder bag">
+          <div><span class="dupe-tag">The splurge</span><h3>Slouchy Shoulder Bag</h3><div class="dupe-price">$1,450</div></div>
         </div>
-        <div class="compare-arrow">→</div>
-        <div class="compare-col">
-          <div class="compare-photo"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=200&q=80" alt="Vegan leather tote dupe"></div>
-          <div>
-            <div class="compare-label label-save">THE SMART SAVE</div>
-            <div class="compare-name">Vegan Leather Slouchy Tote</div>
-            <div class="compare-price price-save">$28.90</div>
-            <span class="savings-badge">Save 98%</span>
-          </div>
+        <div class="dupe-half">
+          <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=200&q=80" alt="Vegan leather tote dupe">
+          <div><span class="dupe-tag">The smart save</span><h3>Vegan Leather Slouchy Tote</h3><div class="dupe-price">$28.90</div></div>
         </div>
       </div>
-      <div class="compare-card">
-        <div class="compare-photo"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=200&q=80" alt="Designer cocktail dress"></div>
-        <div>
-          <div class="compare-label label-splurge">THE SPLURGE</div>
-          <div class="compare-name">Vintage Midi Cocktail Dress</div>
-          <div class="compare-price price-splurge">$248</div>
+      <div class="dupe-note">Buttery-soft faux leather with the same relaxed, architectural slouch. <span class="save">Save $1,421.10 · 98% less</span></div>
+    </div>
+
+    <div class="dupe-card">
+      <div class="dupe-top">
+        <div class="dupe-half splurge">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=200&q=80" alt="Designer cocktail dress">
+          <div><span class="dupe-tag">The splurge</span><h3>Vintage Midi Cocktail Dress</h3><div class="dupe-price">$248</div></div>
         </div>
-        <div class="compare-arrow">→</div>
-        <div class="compare-col">
-          <div class="compare-photo"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=200&q=80" alt="Amazon vintage dress dupe"></div>
-          <div>
-            <div class="compare-label label-save">THE SMART SAVE</div>
-            <div class="compare-name">1950s A-Line Cocktail Dress</div>
-            <div class="compare-price price-save">$43.99</div>
-            <span class="savings-badge">Save 82%</span>
-          </div>
+        <div class="dupe-half">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=200&q=80" alt="Amazon vintage dress dupe">
+          <div><span class="dupe-tag">The smart save</span><h3>1950s A-Line Cocktail Dress</h3><div class="dupe-price">$43.99</div></div>
         </div>
       </div>
+      <div class="dupe-note">Structured bodice, pleated swing skirt, same tea-length silhouette. <span class="save">Save $204.01 · 82% less</span></div>
     </div>
   </div>
 </section>
 
-<section id="finds">
+<section class="spotlight">
+  <div class="wrap spot-grid">
+    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Vintage cocktail dress spotlight">
+    <div>
+      <div class="spot-eyebrow">Editor's pick · this week</div>
+      <h2>The $43 dress everyone's saving to Pinterest right now</h2>
+      <div class="rating">4.6 out of 5 · 8,900+ verified buyers</div>
+      <p class="body">A flattering boat neckline, a cinched bow belt, and a graceful 1950s A-line swing — it photographs like a boutique piece but ships free with Prime.</p>
+      <div class="spot-facts"><span>True to size XS–3XL</span><span>40+ colorways</span><span>Prime fast shipping</span></div>
+      <div class="spot-price">$43.99 <span class="was">$59.99</span></div>
+      <a class="btn-primary" href="product-cropped-wool-coat.html">Read the full review</a>
+    </div>
+  </div>
+</section>
+
+<section id="lookbook">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2>Shop the look</h2><p>Full outfits built from the pins you save the most.</p></div>
+    </div>
+    <div class="look-grid">
+      <div class="look-card"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt="Winter capsule look"><span class="tag">Winter Capsule</span></div>
+      <div class="look-card"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Summer resort look"><span class="tag">Summer Resort</span></div>
+      <div class="look-card"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=500&q=80" alt="Everyday editorial look"><span class="tag">Everyday Edit</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="mood" id="finds">
   <div class="wrap">
     <div class="section-head">
       <div><h2>This week's curated finds</h2><p>Hand-picked pieces from our daily Pinterest edit.</p></div>
-      <a href="#" class="see-all">See full edit →</a>
     </div>
-    <div class="prod-grid">
-      <div class="prod-card">
-        <div class="prod-photo"><img src="wool-coat-cropped.png" alt="Womens Cropped Wool Coat with Notched Lapel and Pockets"></div>
-        <div class="prod-info">
-          <div class="prod-label">Winter Outfits</div>
-          <h3>Cropped Wool Coat, Notched Lapel</h3>
-          <div class="prod-meta"><span class="prod-price">$42.99</span><a href="product-cropped-wool-coat.html" class="prod-link">View pick →</a></div>
-        </div>
+    <div class="finds-grid">
+      <a class="find-card" href="product-cropped-wool-coat.html">
+        <div class="img-wrap"><img src="wool-coat-cropped.png" alt="Cropped Wool Coat, Notched Lapel"></div>
+        <div class="find-cat">Winter Outfits</div><h3>Cropped Wool Coat, Notched Lapel</h3>
+        <div class="find-price">$42.99</div><span class="find-link">View pick</span>
+        <span class="quick-view">Quick view</span>
+      </a>
+      <a class="find-card" href="product-tote-bag-flower-charm.html">
+        <div class="img-wrap"><img src="tote-bag-flower-charm.png" alt="Colorblock Tote with Flower Charm"></div>
+        <div class="find-cat">Bags & Accessories</div><h3>Colorblock Tote with Flower Charm</h3>
+        <div class="find-price">$41.39</div><span class="find-link">View pick</span>
+        <span class="quick-view">Quick view</span>
+      </a>
+      <a class="find-card" href="product-crochet-beach-shorts.html">
+        <div class="img-wrap"><img src="crochet-beach-shorts.png" alt="White Crochet Beach Shorts"></div>
+        <div class="find-cat">Casual Summer</div><h3>White Crochet Beach Shorts</h3>
+        <div class="find-price">$19.99</div><span class="find-link">View pick</span>
+        <span class="quick-view">Quick view</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pin-strip">
+  <div class="wrap">
+    <div>
+      <h2>Outfit ideas that don't take an hour to plan.</h2>
+      <p>Every look on Female Fashion House starts as a Pinterest pin — we build on the ones you save the most, then round them out into full outfits you can actually recreate.</p>
+      <a class="btn-primary" href="https://www.pinterest.com/Femalefashionhouse10/" target="_blank" rel="noopener">See the Pinterest edit</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Editorial fashion styling">
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head" style="border:none;">
+      <div><h2 style="color:var(--cream);">What readers are saying</h2></div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <p class="test-quote">"I stopped scrolling ten tabs deep before buying anything — this is my one stop before checkout now."</p>
+        <div class="test-name">— Priya, verified Pinterest follower</div>
       </div>
-      <div class="prod-card">
-        <div class="prod-photo"><img src="tote-bag-flower-charm.png" alt="Colorblock Tote Bag with Flower Charm, Black and Cream"></div>
-        <div class="prod-info">
-          <div class="prod-label">Bags & Accessories</div>
-          <h3>Colorblock Tote with Flower Charm</h3>
-          <div class="prod-meta"><span class="prod-price">$41.39</span><a href="product-tote-bag-flower-charm.html" class="prod-link">View pick →</a></div>
-        </div>
+      <div class="test-card">
+        <p class="test-quote">"The save-vs-splurge picks alone have saved me hundreds. Everything fits like the description says."</p>
+        <div class="test-name">— Maya, repeat shopper</div>
       </div>
-      <div class="prod-card">
-        <div class="prod-photo"><img src="crochet-beach-shorts.png" alt="White Crochet Beach Shorts, Boho Summer Look"></div>
-        <div class="prod-info">
-          <div class="prod-label">Casual Summer</div>
-          <h3>White Crochet Beach Shorts</h3>
-          <div class="prod-meta"><span class="prod-price">$19.99</span><a href="product-crochet-beach-shorts.html" class="prod-link">View pick →</a></div>
-        </div>
+      <div class="test-card">
+        <p class="test-quote">"Cozy, put-together, and cheap enough that I don't feel guilty restocking every season."</p>
+        <div class="test-name">— Sana, newsletter subscriber</div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="editorial">
+<section class="newsletter">
   <div class="wrap">
-    <div>
-      <div class="eyebrow" style="color:var(--rose);">The Edit</div>
-      <h2>Outfit ideas that don't take an hour to plan.</h2>
-      <p>Every look on Female Fashion House starts as a Pinterest pin — we build on the ones you save the most, then round them out into full outfits you can actually recreate.</p>
-      <a href="#" class="btn-primary" style="background:var(--rose-deep);">Read the latest post</a>
-    </div>
-    <div class="editorial-visual"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Editorial fashion styling"></div>
-  </div>
-</div>
-
-<section id="about">
-  <div class="newsletter">
     <h2>Never miss a pin-worthy find</h2>
     <p>Get the week's best outfit ideas and deals straight to your inbox.</p>
-    <form class="nl-form" onsubmit="return false;">
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Subscribe</button>
+    <form class="news-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
     </form>
   </div>
 </section>
+<p class="disclosure">As an Amazon Associate, Female Fashion House earns from qualifying purchases. Prices and availability are accurate as of the date shown and are subject to change.</p>
 
 <footer>
   <div class="wrap">
-    <p class="disclosure">As an Amazon Associate, Female Fashion House earns from qualifying purchases. Prices and availability are accurate as of the date shown and are subject to change.</p>
     <div class="foot-grid">
-      <div>
-        <div class="logo" style="margin-bottom:14px;">Female <span>Fashion</span> House</div>
-        <p style="color:#6b5b62;font-size:0.9rem;max-width:32ch;">Aesthetic fashion inspo, cozy & trendy vibes for every girl — new picks daily.</p>
+      <div class="foot-brand">
+        <div class="wordmark">Female Fashion <span>House</span></div>
+        <p>Aesthetic fashion inspo, cozy & trendy vibes for every girl — new picks daily.</p>
       </div>
-      <div><h4>Explore</h4><ul><li><a href="#categories">Categories</a></li><li><a href="#dupes">Save vs Splurge</a></li><li><a href="#finds">Curated Finds</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="#categories">Categories</a></li><li><a href="#dupes">Save vs Splurge</a></li><li><a href="#lookbook">Lookbook</a></li></ul></div>
       <div><h4>Follow</h4><ul><li><a href="https://www.pinterest.com/Femalefashionhouse10/" target="_blank" rel="noopener">Pinterest</a></li><li><a href="#">Instagram</a></li></ul></div>
       <div><h4>Site</h4><ul><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Female Fashion House. All rights reserved.</span>
-    </div>
+    <div class="copyright">© 2026 Female Fashion House. All rights reserved.</div>
   </div>
 </footer>
 
