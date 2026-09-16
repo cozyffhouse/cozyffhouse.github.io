@@ -244,20 +244,21 @@
 <script>
 (function(){
   var items=[
-    {img:"wool-coat-cropped.png",name:"Cropped Wool Coat",price:"$42.99",rating:"4.7 (1,240+)"},
-    {img:"tote-bag-flower-charm.png",name:"Colorblock Tote",price:"$41.39",rating:"4.8 (860+)"},
-    {img:"crochet-beach-shorts.png",name:"Crochet Beach Shorts",price:"$19.99",rating:"4.6 (2,100+)"},
-    {img:"cozy-cable-knit-sweater.jpg",name:"Cozy Cable Knit Sweater",price:"$34.99",rating:"4.8 (3,420+)"},
-    {img:"https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=300&q=80",name:"Vegan Leather Tote",price:"$28.90",rating:"4.7 (1,900+)"},
-    {img:"https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=300&q=80",name:"Retro Oval Sunglasses",price:"$15.99",rating:"4.7 (9,400+)"},
-    {img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=300&q=80",name:"1950s A-Line Dress",price:"$43.99",rating:"4.6 (8,900+)"}
+    {img:"wool-coat-cropped.png",name:"Cropped Wool Coat",price:"$42.99",rating:"4.7 (1,240+)",link:"product-cropped-wool-coat.html"},
+    {img:"tote-bag-flower-charm.png",name:"Colorblock Tote",price:"$41.39",rating:"4.8 (860+)",link:"product-tote-bag-flower-charm.html"},
+    {img:"crochet-beach-shorts.png",name:"Crochet Beach Shorts",price:"$19.99",rating:"4.6 (2,100+)",link:"product-crochet-beach-shorts.html"},
+    {img:"cozy-cable-knit-sweater.jpg",name:"Cozy Cable Knit Sweater",price:"$34.99",rating:"4.8 (3,420+)",link:"product-cozy-cable-knit-sweater.html"},
+    {img:"https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=300&q=80",name:"Vegan Leather Tote",price:"$28.90",rating:"4.7 (1,900+)",link:"product-vegan-leather-tote.html"},
+    {img:"https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=300&q=80",name:"Retro Oval Sunglasses",price:"$15.99",rating:"4.7 (9,400+)",link:"product-retro-oval-sunglasses.html"},
+    {img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=300&q=80",name:"1950s A-Line Dress",price:"$43.99",rating:"4.6 (8,900+)",link:"product-vintage-cocktail-dress.html"}
   ];
   var track=document.getElementById('carTrack');
   var current=3;
   var n=items.length;
 
   items.forEach(function(it,i){
-    var card=document.createElement('div');
+    var card=document.createElement('a');
+    card.href=it.link;
     card.className='car-card';
     card.innerHTML='<img src="'+it.img+'" alt="'+it.name+'">'+
       '<span class="idx">#0'+(i+1)+'</span>'+
